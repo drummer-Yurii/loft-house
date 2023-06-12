@@ -665,6 +665,7 @@ a:hover {
 }
 
 .section-map {
+  overflow: hidden;
   position: relative;
   padding: 180px 0;
 }
@@ -682,9 +683,19 @@ a:hover {
   top: 180px;
   line-height: 1;
 }
+@media screen and (max-width: 959px) {
+  .section-map {
+    padding: 90px 0;
+  }
+}
 
 .section-map__title {
   margin-bottom: 88px;
+}
+@media screen and (max-width: 959px) {
+  .section-map__title {
+    margin-bottom: 44px;
+  }
 }
 
 .map {

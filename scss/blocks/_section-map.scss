@@ -1,4 +1,5 @@
 .section-map {
+    overflow: hidden;
     position: relative;
     padding: 180px 0;
 
@@ -10,13 +11,18 @@
         top: 180px;
         line-height: 1;
     }
+
+    @include mediaTablet {
+        padding: 90px 0;   
+    }
 }
 
 .section-map__title {
     margin-bottom: 88px;
-}
 
-.section-map__map {
+    @include mediaTablet {
+        margin-bottom: 44px;   
+    }
 }
 
 .map {
