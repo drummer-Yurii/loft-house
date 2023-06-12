@@ -142,6 +142,10 @@ a:hover {
   font-weight: 700;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 .header {
   display: flex;
   flex-direction: column;
