@@ -25,7 +25,7 @@ phoneInputs.forEach((input) => {
 /* Yandex Map */
 ymaps.ready(init);
 function init() {
-    var myMap = new ymaps.Map("map", {
+    var map = new ymaps.Map("map", {
         center: [55.76, 37.64],
         zoom: 7
     });
@@ -50,5 +50,13 @@ function init() {
         }
     );
 
-    myMap.geoObjects.add(myPlacemark);
+    map.controls.remove('geolocationControl');
+    map.controls.remove('searchControl');
+    map.controls.remove('trafficControl');
+    map.controls.remove('typeSelector');
+    map.controls.remove('rulerControl');
+    map.behaviors.disable(['scrollZoom']);
+
+    map.geoObjects.add(myPlacemark);
+    myPlacemark.balloon.open();
 }
