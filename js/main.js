@@ -29,4 +29,17 @@ function init() {
         center: [55.76, 37.64],
         zoom: 7
     });
+
+    var myPlacemark = new ymaps.Placemark(
+        [55.76, 37.56],
+        {},
+        {
+            iconLayout: 'default#image',
+            iconImageHref: './img/map/location-pin.svg',
+            iconImageSize: [40, 40],
+            iconImageOffset: [-20, -40],
+        }
+    );
+
+    myMap.geoObjects.add(myPlacemark);
 }
